@@ -10,7 +10,7 @@ const server = http.createServer(app);
 const allowedOrigin = process.env.ALLOWED_ORIGIN || '*'; // Default to '*' if not set
 const io = new Server(server, {
     cors: {
-        origin: allowedOrigin,  // Allow connections from allowedOrigin
+        origin: '*', // Allow connections from allowedOrigin
         methods: ["GET", "POST"],
     },
 });
